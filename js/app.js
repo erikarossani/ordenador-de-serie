@@ -1,8 +1,7 @@
 var load = function(){
 	$("#numero").keydown(validarNumero);
 	$("#btn-ingresar").click(ingresarNumero);
-
-
+	$("#btn-ordenar").click(ordenarNumero);
 };
 
 $(document).ready(load);
@@ -10,7 +9,7 @@ $(document).ready(load);
 
 var ingresarNumero = function(event){
   	event.preventDefault();  	//Evita que la acción predeterminada del evento no ocurra
-  	array.push(Number($("#numero").val())); // Añade el número ingresado por el usuario al final de la matriz 
+  	array.push(Number($("#numero").val())); // Añade el número ingresado por el usuario al final del array
   		
   	$("#numero").focus().val("");  //borra el valor del input luego de agregar
 
@@ -25,7 +24,6 @@ var visualizarNumero = function(){
 	}		
 };
 
-
 var validarNumero = function(event) {
     var ascii = event.keyCode;
 
@@ -34,11 +32,14 @@ var validarNumero = function(event) {
 	} else {
 		return false;
 	} //Permite solo el ingreso de números.
-
-
 };
 
 var ordenarNumero = function(event) {
+	array.sort(function(a,b){ 
+	    return a > b 
+	}); //Ordena la serie de numeros
+   
+    visualizarNumero();
 
 };
 
