@@ -3,22 +3,14 @@ var load = function(){
 };
 
 $(document).ready(load);
-
-
-var valorNumerico = function(event) {
-	var valor= $("#numero").val();
-
-	if(isNaN(valor)){
-		
-	}
-
-
-};
+    var btnAgregar = $("#btn-ingresar")
+  	btnAgregar.prop( "disabled", true );
 
 var validarNumero = function(event) {
     var ascii = event.keyCode;
 
 	if (ascii == 8 || (ascii >= 48 && ascii <= 57)) {
+		btnAgregar.prop( "disabled", false );
 		return true;
 	} else {
 		return false;
