@@ -4,13 +4,14 @@ var load = function(){
 
 $(document).ready(load);
     var btnAgregar = $("#btn-ingresar")
-  	btnAgregar.prop( "disabled", true );
+  	btnAgregar.prop( "disabled", true );//Deshabilita el boton
+  	var longitudNumero =parseInt($("#numero").val());
 
 var validarNumero = function(event) {
-    var ascii = event.keyCode;
+    var ascii = event.keyCode; //Obtener el valor Unicode de la tecla pulsada
 
 	if (ascii == 8 || (ascii >= 48 && ascii <= 57)) {
-		btnAgregar.prop( "disabled", false );
+		btnAgregar.prop( "disabled", false );//habilita el boton
 		return true;
 	} else {
 		return false;
