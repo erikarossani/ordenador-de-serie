@@ -1,18 +1,21 @@
 var load = function(){
 	$("#btn-ingresar").click(ingresarNumero);
 	$("#btn-ordenar").click(ordenarNumero);
-	$("#btn-borrar").click(borrarSerie);
+	$("#btn-borrar").click(borrar);
 };
 
 $(document).ready(load);
     var array = [];
-
+   
 var ingresarNumero = function(event){
-  	event.preventDefault();  	//Evita que la acción predeterminada del evento no ocurra
-  	array.push(parseInt($("#numero").val())); // Añade el número entero ingresado por el usuario al final del array
+	event.preventDefault();  	//Evita que la acción predeterminada del evento no ocurra
+    array.push(parseInt($("#numero").val())); // Añade el número entero ingresado por el usuario al final del array
     $("#numero").focus().val("");  //borra el valor del input luego del evento click en agregar
     $("#btn-ingresar").prop( "disabled", true ); //Deshabilita el boton
-  	visualizarNumero();
+
+
+    visualizarNumero()
+
 };
 
 var visualizarNumero = function(){
@@ -27,7 +30,8 @@ var ordenarNumero = function() {
     visualizarNumero();
 };
 
-var borrarSerie = function(){
-    $("#mostrar-numero").empty();
 
+
+var borrar = function(){
+    location.reload();
 };

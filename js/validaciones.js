@@ -17,3 +17,6 @@ var validarNumero = function(event) {
 		return false;
 	} //Permite solo el ingreso de números.
 };
+
+
+
