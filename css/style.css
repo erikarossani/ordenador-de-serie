@@ -53,10 +53,30 @@ input{
 	border-radius: 7px;
 }
 
-#btn-ordenar{
+#btn-ordenar, #btn-borrar{
 	background: #e5e630;
 	font-weight: bold;
     padding: 10px;
-	width: 70%;
+	width: 40%;
 	border-radius: 7px;
+	display: inline-block;
+}
+
+#btn-borrar{
+	background: #acb420;
+}
+
+#btn-ordenar, #btn-borrar, #btn-ingresar:hover{
+	cursor: pointer;
+}
+
+@media(max-width: 480px){
+
+    .titulo{
+		font-size: 2em; 
+	}
+
+	form{
+		width: 100%;
+	}
 }

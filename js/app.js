@@ -1,6 +1,7 @@
 var load = function(){
 	$("#btn-ingresar").click(ingresarNumero);
 	$("#btn-ordenar").click(ordenarNumero);
+	$("#btn-borrar").click(borrarSerie);
 };
 
 $(document).ready(load);
@@ -24,4 +25,9 @@ var ordenarNumero = function() {
 	}); //Ordena la serie de números
    
     visualizarNumero();
+};
+
+var borrarSerie = function(){
+    $("#mostrar-numero").empty();
+
 };
