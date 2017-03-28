@@ -5,7 +5,6 @@ var load = function(){
 $(document).ready(load);
     var btnAgregar = $("#btn-ingresar")
   	btnAgregar.prop( "disabled", true );//Deshabilita el boton
-  	var longitudNumero =parseInt($("#numero").val());
 
 var validarNumero = function(event) {
     var ascii = event.keyCode; //Obtener el valor Unicode de la tecla pulsada
