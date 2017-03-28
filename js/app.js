@@ -17,20 +17,20 @@ var ingresarNumero = function(event){
 };
 
 var visualizarNumero = function(){
-	$("#mostrar-numero").text(array.join(" "));	
-	//Muestra el núumero ingresado por el ususario en el html
+    var nuevoArray = array.filter(function(b, i) { 
+    return array.indexOf(b) == i;
+    });//filtra y construye un nuevo array eliminando los números repetidos 
+
+    $("#mostrar-numero").text(nuevoArray.join(" "));	
 };
 
 var ordenarNumero = function() {
 	array.sort(function(a,b){ 
 	    return a > b 
 	}); //Ordena la serie de números
-  
-    var nuevoArray = array.filter(function(b, i) { 
-    return array.indexOf(b) == i;
-    });//filtra y construye un nuevo array eliminando los números repetidos 
 
-    $("#mostrar-numero").text(nuevoArray.join(" "));	
+	visualizarNumero();
+
 };
 
 var borrar = function(){
