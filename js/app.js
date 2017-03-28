@@ -17,7 +17,8 @@ var ingresarNumero = function(event){
 };
 
 var visualizarNumero = function(){
-	$("#mostrar-numero").text(array.join(" "));	//Muestra el núumero ingresado por el ususario en el html
+	$("#mostrar-numero").text(array.join(" "));	
+	//Muestra el núumero ingresado por el ususario en el html
 };
 
 var ordenarNumero = function() {
@@ -25,9 +26,9 @@ var ordenarNumero = function() {
 	    return a > b 
 	}); //Ordena la serie de números
   
-    var nuevoArray = array.filter(function(este, i) {
-    return array.indexOf(este) == i;
-    });
+    var nuevoArray = array.filter(function(b, i) { 
+    return array.indexOf(b) == i;
+    });//filtra y construye un nuevo array eliminando los números repetidos 
 
     $("#mostrar-numero").text(nuevoArray.join(" "));	
 };
