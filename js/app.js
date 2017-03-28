@@ -25,11 +25,11 @@ var ordenarNumero = function() {
 	    return a > b 
 	}); //Ordena la serie de números
   
-    var novaArr = array.filter(function(este, i) {
+    var nuevoArray = array.filter(function(este, i) {
     return array.indexOf(este) == i;
     });
 
-    $("#mostrar-numero").text(novaArr.join(" "));	
+    $("#mostrar-numero").text(nuevoArray.join(" "));	
 };
 
 var borrar = function(){
