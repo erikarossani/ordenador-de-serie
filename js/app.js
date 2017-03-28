@@ -2,7 +2,6 @@ var load = function(){
 	$("#btn-ingresar").click(ingresarNumero);
 	$("#btn-ordenar").click(ordenarNumero);
 	$("#btn-borrar").click(borrar);
-	$("#btn-ordenar").click(validarRepetidos);
 };
 
 $(document).ready(load);
@@ -26,21 +25,13 @@ var ordenarNumero = function() {
 	    return a > b 
 	}); //Ordena la serie de números
   
-    visualizarNumero();
+    var novaArr = array.filter(function(este, i) {
+    return array.indexOf(este) == i;
+    });
+
+    $("#mostrar-numero").text(novaArr.join(" "));	
 };
 
 var borrar = function(){
     location.reload();
-};
-
-var validarRepetidos = function(){
-   Array.prototype.unique=function(a){
-        return function(){
-        	return this.filter(a)
-        }
-    }(function(a,b,c){
-    	return c.indexOf(a,b+1)<0
-    });
-
-    array.unique();
 };
